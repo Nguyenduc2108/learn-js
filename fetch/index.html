@@ -4,8 +4,35 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Fetch</title>
+
+        <style>
+            .create.hide,
+            .update.hide {
+                display: none;
+            }
+        </style>
     </head>
     <body>
+        <div>
+            <h2>Danh sách khóa học</h2>
+
+            <ul id="list-courses"></ul>
+
+            <div>
+                <div>
+                    <label for="">Title</label>
+                    <input type="text" name="title" />
+                </div>
+                <div>
+                    <label for="">Views</label>
+                    <input type="text" name="views" />
+                </div>
+                <div>
+                    <button class="create" id="create">Create</button>
+                    <button class="update hide" id="update">Save</button>
+                </div>
+            </div>
+        </div>
         <script src="./main.js"></script>
     </body>
 </html>

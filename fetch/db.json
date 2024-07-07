@@ -1,13 +1,39 @@
 {
-    "courses": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "courses": [
+    {
+      "title": "a title",
+      "views": "100",
+      "id": 1
+    },
+    {
+      "title": "a titleaaa4",
+      "views": "10004",
+      "id": 2
+    },
+    {
+      "title": "a titleaaa3",
+      "views": "10003",
+      "id": 3
+    },
+    {
+      "title": "test 2224",
+      "views": "test 2224",
+      "id": 4
+    },
+    {
+      "title": "123",
+      "views": "123",
+      "id": 5
+    },
+    {
+      "title": "12",
+      "views": "123",
+      "id": 6
+    },
+    {
+      "title": "123",
+      "views": "123",
+      "id": 7
     }
-  }
+  ]
+}
