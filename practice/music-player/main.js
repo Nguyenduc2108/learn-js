@@ -86,6 +86,11 @@ const app = {
         localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
     },
 
+    // lưu bài hát đang nghe vào local storage
+    saveCurrentSong: function () {
+        localStorage.setItem("currentSong", JSON.stringify(this.songs[this.currentIndex]));
+    },
+
     render: function () {
         const htmls = this.songs
             .map((song, index) => {
@@ -231,12 +236,9 @@ const app = {
                 if (songNode) {
                     _this.currentIndex = Number(songNode.dataset.index);
                     _this.loadCurrentSong();
+                    _this.saveCurrentSong();
                     _this.render();
                     audio.play();
-                }
-
-                // Xử lý khi click vào option
-                if (e.target.closest(".option")) {
                 }
             }
         };
@@ -268,6 +270,7 @@ const app = {
             this.currentIndex = 0;
         }
         this.loadCurrentSong();
+        _this.saveCurrentSong();
     },
 
     prevSong: function () {
@@ -276,6 +279,7 @@ const app = {
             this.currentIndex = this.songs.length - 1;
         }
         this.loadCurrentSong();
+        _this.saveCurrentSong();
     },
 
     playRandomSong: function () {
