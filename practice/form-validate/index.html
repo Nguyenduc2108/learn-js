@@ -87,7 +87,7 @@
             </form>
         </div>
 
-        <script src="./validator.js"></script>
+        <script src="./validator2.js"></script>
 
         <script>
             Validator({
@@ -98,7 +98,7 @@
                     Validator.isRequired("#fullname", "Vui lòng nhập tên đầy đủ"),
                     Validator.isEmail("#email"),
                     Validator.minLength("#password", 6),
-                    Validator.isRequired('input[name="gender"]'),
+                    // Validator.isRequired('input[name="gender"]'),
                     Validator.isRequired("#province"),
                     Validator.isRequired("#password_confirmation"),
                     Validator.isConfirmed(
