@@ -1,12 +1,12 @@
 function Validator(options) {
     var selectorRules = {};
 
-    function getParent(element, selector) {
-        return element.closest(selector);
-    }
+    // function getParent(element, selector) {
+    //     return element.closest(selector);
+    // }
 
     function validate(inputElement, rule) {
-        var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
+        var errorElement = inputElement.closest(options.formGroupSelector).querySelector(options.errorSelector);
         var errorMessage;
 
         var rules = selectorRules[rule.selector];
@@ -28,10 +28,10 @@ function Validator(options) {
 
         if (errorMessage) {
             errorElement.innerText = errorMessage;
-            getParent(inputElement, options.formGroupSelector).classList.add("invalid");
+            inputElement.closest(options.formGroupSelector).classList.add("invalid");
         } else {
             errorElement.innerText = "";
-            getParent(inputElement, options.formGroupSelector).classList.remove("invalid");
+            inputElement.closest(options.formGroupSelector).classList.remove("invalid");
         }
 
         return !errorMessage;
@@ -104,11 +104,11 @@ function Validator(options) {
                 };
 
                 inputElement.oninput = function () {
-                    var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(
-                        options.errorSelector
-                    );
+                    var errorElement = inputElement
+                        .closest(options.formGroupSelector)
+                        .querySelector(options.errorSelector);
                     errorElement.innerText = "";
-                    getParent(inputElement, options.formGroupSelector).classList.remove("invalid");
+                    inputElement.closest(options.formGroupSelector).classList.remove("invalid");
                 };
             }
         });
