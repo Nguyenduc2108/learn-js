@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Build UI</title>
+    </head>
+    <body>
+        <!-- 
+        store là thằng quan trọng nhất, nó chứa tất cả các state của ứng dụng và update ra view
+
+        1.Viết ra các component(thành phần )
+        => component sẽ phải map với 1 thành phần giống mảng
+        => lặp qua nó
+        => lấy được ra html
+        => render ra html( inner vào html (id="app") )
+        -->
+        <!--
+        Tạo ra thư viện để render FE (client-side) 
+        => render ra giao diện ở phía javascript 
+        => ban đầu chỉ có 1 thẻ div trống 
+        => render ở phần javascript
+        => innerHTML = "" => render ra giao diện 
+         -->
+
+        <!-- rootEl: là object => phải có 1 thằng lấy object làm key được => Map() -->
+        <div id="root"></div>
+
+        <script type="module" src="./script.js"></script>
+    </body>
+</html>
