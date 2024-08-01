@@ -4,7 +4,6 @@ import { connect } from "../store.js";
 import TodoItem from "./TodoItem.js";
 
 function TodoList({ todos, filter, filters }) {
-    console.log(filters);
     return html`
         <section class="main">
             <input
